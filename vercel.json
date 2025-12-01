@@ -1,11 +1,4 @@
 {
   "buildCommand": "npm run build",
-  "outputDirectory": "dist",
-  "rewrites": [
-    {
-      "source": "/Front-LocalFood/(.*)",
-      "destination": "/Front-LocalFood/index.html"
-    }
-  ]
+  "outputDirectory": "dist"
 }
-
