@@ -71,7 +71,7 @@
       "id": 5
     },
     {
-      "name": "1",
+      "name": "3q221312",
       "email": "xdd@xdd.com",
       "phone": "",
       "groupId": 5,
@@ -111,6 +111,19 @@
       },
       "userId": 2,
       "id": 9
+    },
+    {
+      "name": "s",
+      "email": "saasdasdasdasddasd@sadasdad",
+      "phone": "asdasdsa",
+      "address": {
+        "street": "",
+        "city": "",
+        "latitude": 0.000005,
+        "longitude": 0.000005
+      },
+      "userId": 2,
+      "id": 10
     }
   ],
   "groups": [
@@ -293,6 +306,67 @@
       "password": "user123",
       "role": "user",
       "name": "Regular User"
+    }
+  ],
+  "plans": [
+    {
+      "id": 1,
+      "name": "Free",
+      "price": "S/0 / mes",
+      "features": [
+        "Funcionalidades básicas",
+        "Búsquedas por nombre de usuario",
+        "Cálculo de tiempos estimados"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Premium",
+      "price": "S/10 / mensual",
+      "features": [
+        "Todo lo incluido en el plan Free",
+        "Tiempo estimado de llegada de miembros",
+        "Crear y guardar grupos permanentes",
+        "Envío de recordatorios"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Business",
+      "price": "S/25 / anual",
+      "features": [
+        "Todo lo incluido en el plan Premium",
+        "Reglas de presupuesto avanzadas",
+        "Resumen mensual de gastos",
+        "Atención al cliente dedicada para empresas"
+      ]
+    }
+  ],
+  "active_membership": {
+    "id": 101,
+    "userId": 42,
+    "planId": 2,
+    "status": "active",
+    "renewalDate": "2024-12-01",
+    "plan": {
+      "id": 2,
+      "name": "Premium",
+      "price": "S/10 / mensual",
+      "features": [
+        "Todo lo incluido en el plan Free",
+        "Tiempo estimado de llegada de miembros",
+        "Crear y guardar grupos permanentes",
+        "Envío de recordatorios"
+      ]
+    }
+  },
+  "memberships": [
+    {
+      "id": 101,
+      "userId": 42,
+      "planId": 2,
+      "status": "active",
+      "renewalDate": "2024-12-01"
     }
   ]
 }

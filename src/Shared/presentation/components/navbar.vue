@@ -52,6 +52,13 @@ const navigateTo = (routeName) => {
                 >
                     {{ t('option.calculate') }}
                 </button>
+                <button
+                  @click="navigateTo('subscriptions')"
+                  class="nav-link"
+                  :class="{ active: $route.name === 'subscriptions' }"
+                >
+                    {{ t('option.subscriptions') }}
+                </button>
             </div>
 
             <button @click="changeLanguage" class="lang-toggle">

@@ -15,7 +15,9 @@ const menuItems = [
   { icon: '📊', name: 'home', label: 'Dashboard', path: '/' },
   { icon: '👥', name: 'colleagues', label: t('option.colleagues'), path: '/colleagues' },
   { icon: '🍴', name: 'restaurantes', label: t('option.restaurants'), path: '/restaurantes' },
-  { icon: '📍', name: 'calculo', label: t('option.calculate'), path: '/calculo' }
+  { icon: '📍', name: 'calculo', label: t('option.calculate'), path: '/calculo' },
+  { icon: '🚀', name: 'suscripciones', label: t('option.subscriptions'), path: '/suscripciones' }
+
 ];
 
 const isActive = (path) => {

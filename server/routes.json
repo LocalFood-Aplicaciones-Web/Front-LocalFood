@@ -1,3 +1,13 @@
 {
+  "/api/v1/subscriptions/plans": "/plans",
+  "/api/v1/subscriptions/active-membership": "/active_membership",
+  "/api/v1/subscriptions": "/memberships",
+  "/api/v1/categories": "/categories",
+  "/api/v1/tutorials": "/tutorials",
+
+  "/subscriptions/plans": "/plans",
+  "/subscriptions/active-membership": "/active_membership",
+  "/subscriptions": "/memberships",
+
   "/api/v1/*": "/$1"
 }

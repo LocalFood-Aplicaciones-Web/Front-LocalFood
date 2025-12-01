@@ -6,6 +6,7 @@ import Calculo from "../Shared/presentation/pages/Calculo.vue";
 import SignIn from "../iam/presentation/views/sign-in-form.vue";
 import SignUp from "../iam/presentation/views/sign-up-form.vue";
 import { colleaguesRoutes } from "../colleagues/presentation/colleagues-routes.js";
+import Suscripciones from "../Shared/presentation/pages/Suscripciones.vue";
 
 const router = createRouter(
   {
@@ -47,7 +48,13 @@ const router = createRouter(
         name: "calculo",
         component: Calculo,
         meta: { requiresAuth: true }
-      }
+      },
+      {
+        path:"/suscripciones",
+        name: "suscripciones",
+        component: Suscripciones,
+        meta: { requiresAuth: true }
+      },
     ]
   }
 )
