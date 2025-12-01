@@ -52,9 +52,55 @@
     "noMembers": "Sin miembros en este grupo aún"
   },
   "restaurants": {
-    "title": "Restaurantes",
+    "title": "🍽️ Gestión de Restaurantes",
+    "description": "Explora y selecciona restaurantes para tu almuerzo en grupo",
     "addNew": "Agregar Restaurante",
-    "noRestaurants": "No hay restaurantes aún."
+    "noRestaurants": "No hay restaurantes aún.",
+    "loading": "Cargando restaurantes...",
+    "search": {
+      "placeholder": "🔍 Buscar por nombre de restaurante...",
+      "results": "Resultados",
+      "restaurantFound": "restaurante(s) encontrado(s)",
+      "noResults": "No se encontraron restaurantes con los criterios de búsqueda"
+    },
+    "header": {
+      "restaurants": "Restaurantes",
+      "locales": "Locales Totales"
+    },
+    "stats": {
+      "restaurants": "Restaurantes",
+      "localesTotal": "Locales Totales"
+    },
+    "card": {
+      "name": "Nombre",
+      "cuisine": "Tipo",
+      "price": "Precio",
+      "locales": "Locales en Perú",
+      "rating": "Calificación",
+      "budget": "Económico",
+      "moderate": "Moderado",
+      "premium": "Premium",
+      "select": "Seleccionar",
+      "address": "Ubicación",
+      "phone": "Teléfono",
+      "hours": "Horario"
+    },
+    "extraOptions": {
+      "title": "📌 Opción Extra",
+      "allLocales": "Los Locales",
+      "bestQuality": "Mejor Calidad",
+      "noLocales": "❌ No hay locales disponibles con los filtros seleccionados"
+    },
+    "filters": {
+      "all": "Todos los locales",
+      "quality": "Solo los mejor calificados (3-5 ⭐)",
+      "toggle": "Cambiar vista"
+    },
+    "messages": {
+      "selectedRestaurant": "Restaurante seleccionado",
+      "success": "Éxito",
+      "error": "Error"
+    }
   },
   "calculate": {
     "title": "📐 Calculador de Distancias",

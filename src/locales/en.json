@@ -80,9 +80,55 @@
     "noMembers": "No members in this group yet"
   },
   "restaurants": {
-    "title": "Restaurants",
+    "title": "🍽️ Restaurant Management",
+    "description": "Explore and select restaurants for your group lunch",
     "addNew": "Add Restaurant",
-    "noRestaurants": "No restaurants yet."
+    "noRestaurants": "No restaurants yet.",
+    "loading": "Loading restaurants...",
+    "search": {
+      "placeholder": "🔍 Search by restaurant name...",
+      "results": "Results",
+      "restaurantFound": "restaurant(s) found",
+      "noResults": "No restaurants found matching your search criteria"
+    },
+    "header": {
+      "restaurants": "Restaurants",
+      "locales": "Total Locales"
+    },
+    "stats": {
+      "restaurants": "Restaurants",
+      "localesTotal": "Total Locales"
+    },
+    "card": {
+      "name": "Name",
+      "cuisine": "Type",
+      "price": "Price",
+      "locales": "Locales in Peru",
+      "rating": "Rating",
+      "budget": "Budget Friendly",
+      "moderate": "Moderate",
+      "premium": "Premium",
+      "select": "Select",
+      "address": "Location",
+      "phone": "Phone",
+      "hours": "Hours"
+    },
+    "extraOptions": {
+      "title": "📌 Extra Options",
+      "allLocales": "All Locales",
+      "bestQuality": "Best Quality",
+      "noLocales": "❌ No locales available with selected filters"
+    },
+    "filters": {
+      "all": "All available locales",
+      "quality": "Best rated only (3-5 ⭐)",
+      "toggle": "Switch view"
+    },
+    "messages": {
+      "selectedRestaurant": "Restaurant selected",
+      "success": "Success",
+      "error": "Error"
+    }
   },
   "calculate": {
     "title": "📐 Distance Calculator",

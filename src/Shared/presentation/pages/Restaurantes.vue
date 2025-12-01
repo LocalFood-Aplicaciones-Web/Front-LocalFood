@@ -1,10 +1,10 @@
 <script setup>
+import Contenido_restaurante from '../components/Contenido_restaurante.vue';
 </script>
 
 <template>
     <div class="page-container">
-        <h1>Restaurantes</h1>
-        <p>Restaurant management will be implemented here</p>
+        <Contenido_restaurante />
     </div>
 </template>
 
