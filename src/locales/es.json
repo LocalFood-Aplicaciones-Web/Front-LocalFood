@@ -1,0 +1,204 @@
+{
+  "option": {
+    "home": "Inicio",
+    "colleagues": "Colegas",
+    "restaurants": "Restaurantes",
+    "calculate": "Cálculo",
+    "subscriptions": "Suscripciones"
+  },
+  "authoring-phrase": {
+    "intro": "Hecho con",
+    "use": "utilizando",
+    "author": "por el Equipo de Desarrollo de {brand}"
+  },
+  "home": {
+    "title": "Bienvenido",
+    "content": "Bienvenido al Calculador de Distancias de Restaurantes. ¡Gestiona tus colegas y encuentra los mejores puntos de encuentro!"
+  },
+  "page-not-found": {
+    "title": "Página no encontrada",
+    "content": "La ruta {unavailable-route} no está disponible.",
+    "go-home": "Ir al Inicio"
+  },
+  "colleagues": {
+    "title": "Colegas",
+    "addNew": "Agregar Colega",
+    "editColleague": "Editar Colega",
+    "noColleagues": "No hay colegas aún. ¡Comienza agregando uno!",
+    "confirmDelete": "¿Estás seguro de que deseas eliminar a {name}?",
+    "name": "Nombre",
+    "email": "Correo Electrónico",
+    "phone": "Teléfono",
+    "street": "Dirección",
+    "city": "Ciudad",
+    "latitude": "Latitud",
+    "longitude": "Longitud",
+    "namePlaceholder": "Ingresa el nombre del colega",
+    "emailPlaceholder": "colega@ejemplo.com",
+    "phonePlaceholder": "+52 123 456 7890",
+    "streetPlaceholder": "Av. Principal 123",
+    "cityPlaceholder": "Ciudad de México",
+    "latitudePlaceholder": "19.4326",
+    "longitudePlaceholder": "-99.1332"
+  },
+  "groups": {
+    "title": "Grupos",
+    "addNew": "Agregar Grupo",
+    "editGroup": "Editar Grupo",
+    "name": "Nombre del Grupo",
+    "description": "Descripción",
+    "color": "Color",
+    "members": "Miembros",
+    "noMembers": "Sin miembros en este grupo aún"
+  },
+  "restaurants": {
+    "title": "🍽️ Gestión de Restaurantes",
+    "description": "Explora y selecciona restaurantes para tu almuerzo en grupo",
+    "addNew": "Agregar Restaurante",
+    "noRestaurants": "No hay restaurantes aún.",
+    "loading": "Cargando restaurantes...",
+    "search": {
+      "placeholder": "🔍 Buscar por nombre de restaurante...",
+      "results": "Resultados",
+      "restaurantFound": "restaurante(s) encontrado(s)",
+      "noResults": "No se encontraron restaurantes con los criterios de búsqueda"
+    },
+    "header": {
+      "restaurants": "Restaurantes",
+      "locales": "Locales Totales"
+    },
+    "stats": {
+      "restaurants": "Restaurantes",
+      "localesTotal": "Locales Totales"
+    },
+    "card": {
+      "name": "Nombre",
+      "cuisine": "Tipo",
+      "price": "Precio",
+      "locales": "Locales en Perú",
+      "rating": "Calificación",
+      "budget": "Económico",
+      "moderate": "Moderado",
+      "premium": "Premium",
+      "select": "Seleccionar",
+      "address": "Ubicación",
+      "phone": "Teléfono",
+      "hours": "Horario"
+    },
+    "extraOptions": {
+      "title": "📌 Opción Extra",
+      "allLocales": "Los Locales",
+      "bestQuality": "Mejor Calidad",
+      "noLocales": "❌ No hay locales disponibles con los filtros seleccionados"
+    },
+    "filters": {
+      "all": "Todos los locales",
+      "quality": "Solo los mejor calificados (3-5 ⭐)",
+      "toggle": "Cambiar vista"
+    },
+    "messages": {
+      "selectedRestaurant": "Restaurante seleccionado",
+      "success": "Éxito",
+      "error": "Error"
+    }
+  },
+  "calculate": {
+    "title": "📐 Calculador de Distancias",
+    "description": "Encuentra el restaurante más cercano para tu grupo",
+    "selectGroup": "Selecciona un grupo para comenzar",
+    "goToGroups": "Ir a Grupos",
+    "restaurantCard": {
+      "title": "Restaurante Seleccionado",
+      "noRestaurant": "Sin restaurante seleccionado",
+      "rating": "Valoración",
+      "price": "Precio",
+      "location": "Ubicación",
+      "phone": "Teléfono",
+      "cuisine": "Tipo de Cocina",
+      "calculate": "Calcular Distancia"
+    },
+    "topRestaurants": {
+      "title": "Top 3 KFC Cercanos",
+      "distance": "Distancia",
+      "away": "de distancia",
+      "noRestaurants": "Cargando restaurantes cercanos..."
+    },
+    "groupMembers": {
+      "title": "Grupo",
+      "noMembers": "Sin miembros en el grupo",
+      "leader": "Líder",
+      "members": "miembros",
+      "maxMembers": "Máximo 8 miembros"
+    },
+    "actionButtons": {
+      "addMembers": "Agregar Personas",
+      "editRestaurant": "Editar Restaurante",
+      "calculateAlt": "Calcular Alt."
+    },
+    "membersByDistance": {
+      "title": "Miembros por Distancia",
+      "order": "Orden",
+      "name": "Nombre",
+      "distance": "Distancia"
+    },
+    "googleMaps": {
+      "title": "Mapa de Ubicaciones",
+      "placeholder": "Integración de Google Maps (Próximamente)"
+    },
+    "results": {
+      "distanceToGroup": "Distancia al Grupo",
+      "averageDistance": "Distancia Promedio",
+      "viabilityScore": "Puntuación de Viabilidad",
+      "maxSpread": "Dispersión Máxima"
+    },
+    "dialogs": {
+      "addMembers": "Agregar Miembros al Grupo",
+      "shareInstructions": "Comparte con tu grupo:",
+      "availableColleagues": "O selecciona colegas disponibles:",
+      "noColleagues": "Sin colegas disponibles",
+      "selectRestaurant": "Seleccionar Restaurante",
+      "searchRestaurant": "Buscar restaurante...",
+      "inviteLink": "Link de Invitación",
+      "copyLink": "Copiar Link",
+      "qrCode": "Código QR"
+    },
+    "messages": {
+      "selectRestaurantWarning": "Selecciona un restaurante y asegúrate de tener miembros",
+      "calculationSuccess": "Distancia calculada exitosamente",
+      "incomplete": "Incompleto",
+      "success": "Éxito",
+      "calculated": "Calculado",
+      "limitReached": "Límite alcanzado",
+      "maxMembers": "Máximo 8 miembros en el grupo",
+      "warn": "Advertencia",
+      "addedSuccess": "miembros añadidos",
+      "added": "Añadidos",
+      "removed": "Removido",
+      "removedSuccess": "removido del grupo",
+      "copied": "Copiado",
+      "linkCopied": "Link copiado al portapapeles"
+    },
+    "confirmations": {
+      "removeMember": "¿Remover {name} del grupo?",
+      "confirm": "Confirmar"
+    }
+  },
+  "common": {
+    "loading": "Cargando...",
+    "edit": "Editar",
+    "delete": "Eliminar",
+    "cancel": "Cancelar",
+    "add": "Agregar",
+    "update": "Actualizar",
+    "save": "Guardar",
+    "close": "Cerrar",
+    "search": "Buscar",
+    "error": "Error",
+    "warning": "Advertencia",
+    "success": "Éxito",
+    "info": "Información"
+  },
+  "errors": {
+    "occurred": "Ocurrieron errores"
+  }
+}

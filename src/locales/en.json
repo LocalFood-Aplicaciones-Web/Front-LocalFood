@@ -1,0 +1,232 @@
+{
+  "option": {
+    "home": "Home",
+    "colleagues": "Colleagues",
+    "restaurants": "Restaurants",
+    "calculate": "Calculate",
+    "subscriptions": "Subscriptions"
+  },
+  "authoring-phrase": {
+    "intro": "Made with",
+    "use": "using",
+    "author": "by {brand} Developer Team"
+  },
+  "home": {
+    "title": "Welcome",
+    "content": "Welcome to Restaurant Distance Calculator. Manage your colleagues and find the best meeting points!"
+  },
+  "page-not-found": {
+    "title": "Page Not Found",
+    "content": "The path {unavailable-route} is not available.",
+    "go-home": "Go Home"
+  },
+  "login": {
+    "title": "Sign In",
+    "subtitle": "Sign in to your account",
+    "email": "Email",
+    "password": "Password",
+    "emailPlaceholder": "Enter your email",
+    "passwordPlaceholder": "Enter your password",
+    "loginButton": "Sign In",
+    "registerButton": "Create Account",
+    "noAccount": "Don't have an account?"
+  },
+  "register": {
+    "title": "Create Account",
+    "subtitle": "Join us today",
+    "name": "Full Name",
+    "username": "Username",
+    "email": "Email",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "namePlaceholder": "Enter your full name",
+    "usernamePlaceholder": "Choose a username",
+    "emailPlaceholder": "Enter your email",
+    "passwordPlaceholder": "Create a password",
+    "confirmPasswordPlaceholder": "Confirm your password",
+    "registerButton": "Create Account",
+    "loginButton": "Sign In",
+    "hasAccount": "Already have an account?"
+  },
+  "colleagues": {
+    "title": "Colleagues",
+    "addNew": "Add Colleague",
+    "editColleague": "Edit Colleague",
+    "noColleagues": "No colleagues yet. Start by adding one!",
+    "confirmDelete": "Are you sure you want to delete {name}?",
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone",
+    "street": "Street Address",
+    "city": "City",
+    "latitude": "Latitude",
+    "longitude": "Longitude",
+    "namePlaceholder": "Enter colleague name",
+    "emailPlaceholder": "colleague@example.com",
+    "phonePlaceholder": "+1 234 567 890",
+    "streetPlaceholder": "123 Main St",
+    "cityPlaceholder": "New York",
+    "latitudePlaceholder": "40.7128",
+    "longitudePlaceholder": "-74.0060"
+  },
+  "groups": {
+    "title": "Groups",
+    "addNew": "Add Group",
+    "editGroup": "Edit Group",
+    "name": "Group Name",
+    "description": "Description",
+    "color": "Color",
+    "members": "Members",
+    "noMembers": "No members in this group yet"
+  },
+  "restaurants": {
+    "title": "🍽️ Restaurant Management",
+    "description": "Explore and select restaurants for your group lunch",
+    "addNew": "Add Restaurant",
+    "noRestaurants": "No restaurants yet.",
+    "loading": "Loading restaurants...",
+    "search": {
+      "placeholder": "🔍 Search by restaurant name...",
+      "results": "Results",
+      "restaurantFound": "restaurant(s) found",
+      "noResults": "No restaurants found matching your search criteria"
+    },
+    "header": {
+      "restaurants": "Restaurants",
+      "locales": "Total Locales"
+    },
+    "stats": {
+      "restaurants": "Restaurants",
+      "localesTotal": "Total Locales"
+    },
+    "card": {
+      "name": "Name",
+      "cuisine": "Type",
+      "price": "Price",
+      "locales": "Locales in Peru",
+      "rating": "Rating",
+      "budget": "Budget Friendly",
+      "moderate": "Moderate",
+      "premium": "Premium",
+      "select": "Select",
+      "address": "Location",
+      "phone": "Phone",
+      "hours": "Hours"
+    },
+    "extraOptions": {
+      "title": "📌 Extra Options",
+      "allLocales": "All Locales",
+      "bestQuality": "Best Quality",
+      "noLocales": "❌ No locales available with selected filters"
+    },
+    "filters": {
+      "all": "All available locales",
+      "quality": "Best rated only (3-5 ⭐)",
+      "toggle": "Switch view"
+    },
+    "messages": {
+      "selectedRestaurant": "Restaurant selected",
+      "success": "Success",
+      "error": "Error"
+    }
+  },
+  "calculate": {
+    "title": "📐 Distance Calculator",
+    "description": "Find the best restaurant for your group",
+    "selectGroup": "Select a group to start",
+    "goToGroups": "Go to Groups",
+    "restaurantCard": {
+      "title": "Selected Restaurant",
+      "noRestaurant": "No restaurant selected",
+      "rating": "Rating",
+      "price": "Price",
+      "location": "Location",
+      "phone": "Phone",
+      "cuisine": "Cuisine Type",
+      "calculate": "Calculate Distance"
+    },
+    "topRestaurants": {
+      "title": "Top 3 Nearby KFC",
+      "distance": "Distance",
+      "away": "away",
+      "noRestaurants": "Loading nearby restaurants..."
+    },
+    "groupMembers": {
+      "title": "Group",
+      "noMembers": "No members in group",
+      "leader": "Leader",
+      "members": "members",
+      "maxMembers": "Maximum 8 members"
+    },
+    "actionButtons": {
+      "addMembers": "Add Members",
+      "editRestaurant": "Edit Restaurant",
+      "calculateAlt": "Calculate Alt."
+    },
+    "membersByDistance": {
+      "title": "Members by Distance",
+      "order": "Order",
+      "name": "Name",
+      "distance": "Distance"
+    },
+    "googleMaps": {
+      "title": "Location Map",
+      "placeholder": "Google Maps Integration (Coming Soon)"
+    },
+    "results": {
+      "distanceToGroup": "Distance to Group",
+      "averageDistance": "Average Distance",
+      "viabilityScore": "Viability Score",
+      "maxSpread": "Maximum Spread"
+    },
+    "dialogs": {
+      "addMembers": "Add Members to Group",
+      "shareInstructions": "Share with your group:",
+      "availableColleagues": "Or select available colleagues:",
+      "noColleagues": "No colleagues available",
+      "selectRestaurant": "Select Restaurant",
+      "searchRestaurant": "Search restaurant...",
+      "inviteLink": "Invite Link",
+      "copyLink": "Copy Link",
+      "qrCode": "QR Code"
+    },
+    "messages": {
+      "selectRestaurantWarning": "Select a restaurant and make sure you have members",
+      "calculationSuccess": "Distance calculated successfully",
+      "incomplete": "Incomplete",
+      "success": "Success",
+      "calculated": "Calculated",
+      "limitReached": "Limit reached",
+      "maxMembers": "Maximum 8 members in the group",
+      "warn": "Warning",
+      "addedSuccess": "members added",
+      "added": "Added",
+      "removed": "Removed",
+      "removedSuccess": "removed from group",
+      "copied": "Copied",
+      "linkCopied": "Link copied to clipboard"
+    },
+    "confirmations": {
+      "removeMember": "Remove {name} from the group?",
+      "confirm": "Confirm"
+    }
+  },
+  "common": {
+    "loading": "Loading...",
+    "edit": "Edit",
+    "delete": "Delete",
+    "cancel": "Cancel",
+    "add": "Add",
+    "update": "Update",
+    "save": "Save",
+    "close": "Close",
+    "search": "Search",
+    "error": "Error",
+    "warning": "Warning",
+    "success": "Success",
+    "info": "Information"
+  },
+  "errors": {
+    "occurred": "Errors occurred"
+  }
+}
