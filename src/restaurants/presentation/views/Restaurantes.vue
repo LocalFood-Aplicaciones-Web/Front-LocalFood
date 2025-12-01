@@ -1,113 +1,110 @@
 /**
- * Contenido_restaurante.vue
- * @description Componente contenedor del módulo de restaurantes
- * Vue-First: Enfocado en reactividad, computed properties e i18n
+ * Restaurantes.vue
+ * @description Main view for restaurant management
+ * Displays all restaurants grouped by name with search functionality
  */
 
 <script setup>
 import { onMounted, computed } from 'vue';
-import { useI18n } from 'vue-i18n';
-import { useRestaurantsStore } from '../../../restaurants/application/restaurants.store.js';
-import RestaurantCard from '../../../restaurants/presentation/components/RestaurantCard.vue';
-import RestaurantSearch from '../../../restaurants/presentation/components/RestaurantSearch.vue';
+import { useRestaurantsStore } from '../../restaurants/application/restaurants.store.js';
+import RestaurantCard from '../components/RestaurantCard.vue';
+import RestaurantSearch from '../components/RestaurantSearch.vue';
 import ProgressSpinner from 'primevue/progressspinner';
 import Message from 'primevue/message';
 
-const { t } = useI18n();
 const restaurantsStore = useRestaurantsStore();
 
-// Lifecycle: Cargar restaurantes al montar el componente
+// Load restaurants on mount
 onMounted(async () => {
   await restaurantsStore.fetchRestaurants();
 });
 
-// Computed properties para renderizado reactivo
-const isLoading = computed(() => restaurantsStore.loading);
-const hasError = computed(() => !!restaurantsStore.error);
-const errorMessage = computed(() => restaurantsStore.error);
-
-const restaurantCount = computed(() => restaurantsStore.groupedRestaurants.length);
-const totalLocales = computed(() => restaurantsStore.restaurants.length);
-
-const hasNoResults = computed(() => {
-  return !isLoading.value && restaurantCount.value === 0;
-});
-
-const shouldShowGrid = computed(() => {
-  return !isLoading.value && !hasNoResults.value;
+// Computed properties
+const totalRestaurants = computed(() => restaurantsStore.restaurants.length);
+const totalLocales = computed(() => {
+  return restaurantsStore.restaurants.reduce((acc, r) => acc + 1, 0);
 });
 </script>
 
 <template>
-  <section class="content">
-    <!-- Page Header: Título y estadísticas con binding reactivo -->
+  <div class="restaurantes-page">
+    <!-- Page Header -->
     <div class="page-header">
       <div class="header-content">
-        <h1>{{ t('restaurants.title') }}</h1>
-        <p class="subtitle">{{ t('restaurants.description') }}</p>
+        <h1>🍽️ Gestión de Restaurantes</h1>
+        <p class="subtitle">Explora y selecciona restaurantes para tu almuerzo en grupo</p>
       </div>
       <div class="header-stats">
-        <!-- Card de estadísticas con valores reactivos -->
         <div class="stat-card">
           <span class="stat-icon">🍴</span>
           <div class="stat-info">
-            <p class="stat-label">{{ t('restaurants.stats.restaurants') }}</p>
-            <p class="stat-value">{{ restaurantCount }}</p>
+            <p class="stat-label">Restaurantes</p>
+            <p class="stat-value">{{ restaurantsStore.groupedRestaurants.length }}</p>
           </div>
         </div>
         <div class="stat-card">
           <span class="stat-icon">📍</span>
           <div class="stat-info">
-            <p class="stat-label">{{ t('restaurants.stats.localesTotal') }}</p>
-            <p class="stat-value">{{ totalLocales }}</p>
+            <p class="stat-label">Locales Totales</p>
+            <p class="stat-value">{{ totalRestaurants }}</p>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Componente de búsqueda -->
+    <!-- Search Component -->
     <RestaurantSearch />
 
-    <!-- Estado de carga: v-if con transición -->
-    <div v-if="isLoading" class="loading-container">
+    <!-- Loading State -->
+    <div v-if="restaurantsStore.loading" class="loading-container">
       <ProgressSpinner />
-      <p>{{ t('restaurants.loading') }}</p>
+      <p>Cargando restaurantes...</p>
     </div>
 
-    <!-- Estado de error: Message component reactivo -->
+    <!-- Error State -->
     <Message
-      v-if="hasError"
+      v-if="restaurantsStore.error"
       severity="error"
-      :text="errorMessage"
+      :text="restaurantsStore.error"
       class="error-message"
     />
 
-    <!-- Estado vacío: Mostrar cuando no hay resultados -->
+    <!-- Empty State -->
     <Message
-      v-if="hasNoResults"
+      v-if="!restaurantsStore.loading && restaurantsStore.groupedRestaurants.length === 0"
       severity="info"
-      :text="t('restaurants.search.noResults')"
+      text="No se encontraron restaurantes con los criterios de búsqueda"
       class="empty-message"
     />
 
-    <!-- Grid de restaurantes: v-if + v-for con binding reactivo -->
-    <div v-if="shouldShowGrid" class="restaurants-grid">
+    <!-- Restaurants Grid -->
+    <div v-if="!restaurantsStore.loading && restaurantsStore.groupedRestaurants.length > 0" class="restaurants-grid">
       <RestaurantCard
         v-for="restaurant in restaurantsStore.groupedRestaurants"
         :key="restaurant.name"
         :restaurant="restaurant"
       />
     </div>
-  </section>
+  </div>
 </template>
 
 <style scoped>
-.content {
-  flex: 1;
-  padding: 40px;
-  background-color: #f4f4f4;
-  min-height: 100vh;
-  overflow-y: auto;
+.restaurantes-page {
+  padding: 24px;
+  max-width: 1400px;
+  margin: 0 auto;
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .page-header {
@@ -199,7 +196,7 @@ const shouldShowGrid = computed(() => {
 
 .restaurants-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   gap: 24px;
   animation: gridAppear 0.4s ease-in;
 }
@@ -210,12 +207,6 @@ const shouldShowGrid = computed(() => {
   }
   to {
     opacity: 1;
-  }
-}
-
-@media (max-width: 1200px) {
-  .restaurants-grid {
-    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
   }
 }
 
@@ -234,14 +225,8 @@ const shouldShowGrid = computed(() => {
   }
 }
 
-@media (max-width: 900px) {
-  .restaurants-grid {
-    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
-  }
-}
-
 @media (max-width: 768px) {
-  .content {
+  .restaurantes-page {
     padding: 16px;
   }
 
@@ -267,3 +252,4 @@ const shouldShowGrid = computed(() => {
   }
 }
 </style>
+
