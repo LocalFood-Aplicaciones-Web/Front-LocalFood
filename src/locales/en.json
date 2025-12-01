@@ -85,11 +85,85 @@
     "noRestaurants": "No restaurants yet."
   },
   "calculate": {
-    "title": "Calculate Distance",
-    "description": "Find the best restaurant for your group"
-  },
-  "subscriptions": {
-    "title": "Subscriptions"
+    "title": "📐 Distance Calculator",
+    "description": "Find the best restaurant for your group",
+    "selectGroup": "Select a group to start",
+    "goToGroups": "Go to Groups",
+    "restaurantCard": {
+      "title": "Selected Restaurant",
+      "noRestaurant": "No restaurant selected",
+      "rating": "Rating",
+      "price": "Price",
+      "location": "Location",
+      "phone": "Phone",
+      "cuisine": "Cuisine Type",
+      "calculate": "Calculate Distance"
+    },
+    "topRestaurants": {
+      "title": "Top 3 Nearby KFC",
+      "distance": "Distance",
+      "away": "away",
+      "noRestaurants": "Loading nearby restaurants..."
+    },
+    "groupMembers": {
+      "title": "Group",
+      "noMembers": "No members in group",
+      "leader": "Leader",
+      "members": "members",
+      "maxMembers": "Maximum 8 members"
+    },
+    "actionButtons": {
+      "addMembers": "Add Members",
+      "editRestaurant": "Edit Restaurant",
+      "calculateAlt": "Calculate Alt."
+    },
+    "membersByDistance": {
+      "title": "Members by Distance",
+      "order": "Order",
+      "name": "Name",
+      "distance": "Distance"
+    },
+    "googleMaps": {
+      "title": "Location Map",
+      "placeholder": "Google Maps Integration (Coming Soon)"
+    },
+    "results": {
+      "distanceToGroup": "Distance to Group",
+      "averageDistance": "Average Distance",
+      "viabilityScore": "Viability Score",
+      "maxSpread": "Maximum Spread"
+    },
+    "dialogs": {
+      "addMembers": "Add Members to Group",
+      "shareInstructions": "Share with your group:",
+      "availableColleagues": "Or select available colleagues:",
+      "noColleagues": "No colleagues available",
+      "selectRestaurant": "Select Restaurant",
+      "searchRestaurant": "Search restaurant...",
+      "inviteLink": "Invite Link",
+      "copyLink": "Copy Link",
+      "qrCode": "QR Code"
+    },
+    "messages": {
+      "selectRestaurantWarning": "Select a restaurant and make sure you have members",
+      "calculationSuccess": "Distance calculated successfully",
+      "incomplete": "Incomplete",
+      "success": "Success",
+      "calculated": "Calculated",
+      "limitReached": "Limit reached",
+      "maxMembers": "Maximum 8 members in the group",
+      "warn": "Warning",
+      "addedSuccess": "members added",
+      "added": "Added",
+      "removed": "Removed",
+      "removedSuccess": "removed from group",
+      "copied": "Copied",
+      "linkCopied": "Link copied to clipboard"
+    },
+    "confirmations": {
+      "removeMember": "Remove {name} from the group?",
+      "confirm": "Confirm"
+    }
   },
   "common": {
     "loading": "Loading...",
@@ -99,7 +173,12 @@
     "add": "Add",
     "update": "Update",
     "save": "Save",
-    "close": "Close"
+    "close": "Close",
+    "search": "Search",
+    "error": "Error",
+    "warning": "Warning",
+    "success": "Success",
+    "info": "Information"
   },
   "errors": {
     "occurred": "Errors occurred"

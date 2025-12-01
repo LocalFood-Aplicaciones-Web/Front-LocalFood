@@ -41,17 +41,101 @@
     "latitudePlaceholder": "19.4326",
     "longitudePlaceholder": "-99.1332"
   },
+  "groups": {
+    "title": "Grupos",
+    "addNew": "Agregar Grupo",
+    "editGroup": "Editar Grupo",
+    "name": "Nombre del Grupo",
+    "description": "Descripción",
+    "color": "Color",
+    "members": "Miembros",
+    "noMembers": "Sin miembros en este grupo aún"
+  },
   "restaurants": {
     "title": "Restaurantes",
     "addNew": "Agregar Restaurante",
     "noRestaurants": "No hay restaurantes aún."
   },
   "calculate": {
-    "title": "Calcular Distancia",
-    "description": "Encuentra el mejor restaurante para tu grupo"
-  },
-  "subscriptions": {
-    "title": "Suscripciones"
+    "title": "📐 Calculador de Distancias",
+    "description": "Encuentra el restaurante más cercano para tu grupo",
+    "selectGroup": "Selecciona un grupo para comenzar",
+    "goToGroups": "Ir a Grupos",
+    "restaurantCard": {
+      "title": "Restaurante Seleccionado",
+      "noRestaurant": "Sin restaurante seleccionado",
+      "rating": "Valoración",
+      "price": "Precio",
+      "location": "Ubicación",
+      "phone": "Teléfono",
+      "cuisine": "Tipo de Cocina",
+      "calculate": "Calcular Distancia"
+    },
+    "topRestaurants": {
+      "title": "Top 3 KFC Cercanos",
+      "distance": "Distancia",
+      "away": "de distancia",
+      "noRestaurants": "Cargando restaurantes cercanos..."
+    },
+    "groupMembers": {
+      "title": "Grupo",
+      "noMembers": "Sin miembros en el grupo",
+      "leader": "Líder",
+      "members": "miembros",
+      "maxMembers": "Máximo 8 miembros"
+    },
+    "actionButtons": {
+      "addMembers": "Agregar Personas",
+      "editRestaurant": "Editar Restaurante",
+      "calculateAlt": "Calcular Alt."
+    },
+    "membersByDistance": {
+      "title": "Miembros por Distancia",
+      "order": "Orden",
+      "name": "Nombre",
+      "distance": "Distancia"
+    },
+    "googleMaps": {
+      "title": "Mapa de Ubicaciones",
+      "placeholder": "Integración de Google Maps (Próximamente)"
+    },
+    "results": {
+      "distanceToGroup": "Distancia al Grupo",
+      "averageDistance": "Distancia Promedio",
+      "viabilityScore": "Puntuación de Viabilidad",
+      "maxSpread": "Dispersión Máxima"
+    },
+    "dialogs": {
+      "addMembers": "Agregar Miembros al Grupo",
+      "shareInstructions": "Comparte con tu grupo:",
+      "availableColleagues": "O selecciona colegas disponibles:",
+      "noColleagues": "Sin colegas disponibles",
+      "selectRestaurant": "Seleccionar Restaurante",
+      "searchRestaurant": "Buscar restaurante...",
+      "inviteLink": "Link de Invitación",
+      "copyLink": "Copiar Link",
+      "qrCode": "Código QR"
+    },
+    "messages": {
+      "selectRestaurantWarning": "Selecciona un restaurante y asegúrate de tener miembros",
+      "calculationSuccess": "Distancia calculada exitosamente",
+      "incomplete": "Incompleto",
+      "success": "Éxito",
+      "calculated": "Calculado",
+      "limitReached": "Límite alcanzado",
+      "maxMembers": "Máximo 8 miembros en el grupo",
+      "warn": "Advertencia",
+      "addedSuccess": "miembros añadidos",
+      "added": "Añadidos",
+      "removed": "Removido",
+      "removedSuccess": "removido del grupo",
+      "copied": "Copiado",
+      "linkCopied": "Link copiado al portapapeles"
+    },
+    "confirmations": {
+      "removeMember": "¿Remover {name} del grupo?",
+      "confirm": "Confirmar"
+    }
   },
   "common": {
     "loading": "Cargando...",
@@ -61,7 +145,12 @@
     "add": "Agregar",
     "update": "Actualizar",
     "save": "Guardar",
-    "close": "Cerrar"
+    "close": "Cerrar",
+    "search": "Buscar",
+    "error": "Error",
+    "warning": "Advertencia",
+    "success": "Éxito",
+    "info": "Información"
   },
   "errors": {
     "occurred": "Ocurrieron errores"
