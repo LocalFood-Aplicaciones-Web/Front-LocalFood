@@ -23,7 +23,10 @@ const isActive = (path) => {
 };
 
 const changeLanguage = () => {
-  locale.value = locale.value === 'en' ? 'es' : 'en';
+  const newLocale = locale.value === 'en' ? 'es' : 'en';
+  locale.value = newLocale;
+  localStorage.setItem('locale', newLocale);
+  console.log('🌐 Idioma cambiado a:', newLocale);
 };
 
 const handleLogout = () => {

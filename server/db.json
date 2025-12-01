@@ -1,4 +1,30 @@
 {
+  "users": [
+    {
+      "id": 1,
+      "name": "Admin User",
+      "email": "admin@example.com",
+      "password": "admin123",
+      "role": "admin",
+      "createdAt": "2025-01-01T00:00:00Z"
+    },
+    {
+      "id": 2,
+      "name": "John Smith",
+      "email": "john.smith@example.com",
+      "password": "password123",
+      "role": "user",
+      "createdAt": "2025-01-02T00:00:00Z"
+    },
+    {
+      "id": 3,
+      "name": "Sarah Johnson",
+      "email": "sarah.johnson@example.com",
+      "password": "password123",
+      "role": "user",
+      "createdAt": "2025-01-03T00:00:00Z"
+    }
+  ],
   "colleagues": [
     {
       "name": "John Smith",
@@ -6,11 +32,12 @@
       "phone": "+1 555-0101",
       "groupId": 1,
       "userId": 1,
+      "isLeader": true,
       "address": {
-        "street": "123 Main Street",
-        "city": "New York",
-        "latitude": 40.7589,
-        "longitude": -73.9851
+        "street": "Av. Paseo de la República 5150",
+        "city": "Lima",
+        "latitude": -12.0904,
+        "longitude": -77.0396
       },
       "id": 1
     },
@@ -21,11 +48,12 @@
       "phone": "+1 555-0102",
       "userId": 1,
       "groupId": 1,
+      "isLeader": false,
       "address": {
-        "street": "456 Park Avenue",
-        "city": "New York",
-        "latitude": 40.7614,
-        "longitude": -73.9776
+        "street": "Av. Larco 1028",
+        "city": "Lima",
+        "latitude": -12.1265,
+        "longitude": -77.0305
       }
     },
     {
@@ -34,11 +62,12 @@
       "phone": "+1 555-0103",
       "groupId": 3,
       "userId": 1,
+      "isLeader": true,
       "address": {
-        "street": "789 Broadway",
-        "city": "New York",
-        "latitude": 40.7505,
-        "longitude": -73.9934
+        "street": "Jr. Lampa 540",
+        "city": "Lima",
+        "latitude": -12.0469,
+        "longitude": -77.0289
       },
       "id": 3
     },
@@ -49,11 +78,12 @@
       "phone": "+1 555-0104",
       "userId": 1,
       "groupId": 2,
+      "isLeader": true,
       "address": {
-        "street": "321 Fifth Avenue",
-        "city": "New York",
-        "latitude": 40.7549,
-        "longitude": -73.984
+        "street": "Av. Arequipa 4050",
+        "city": "Lima",
+        "latitude": -12.0789,
+        "longitude": -77.0321
       }
     },
     {
@@ -62,55 +92,59 @@
       "phone": "+1 555-0105",
       "groupId": 3,
       "userId": 1,
+      "isLeader": false,
       "address": {
-        "street": "654 Madison Avenue",
-        "city": "New York",
-        "latitude": 40.7614,
-        "longitude": -73.9719
+        "street": "Jr. de la Unión 600",
+        "city": "Lima",
+        "latitude": -12.0461,
+        "longitude": -77.0283
       },
       "id": 5
     },
     {
-      "name": "1",
-      "email": "xdd@xdd.com",
-      "phone": "",
-      "groupId": 5,
+      "name": "Carlos Mendoza",
+      "email": "carlos.mendoza@example.com",
+      "phone": "+51924380050",
+      "groupId": 1,
+      "userId": 1,
+      "isLeader": false,
       "address": {
-        "street": "123",
-        "city": "123",
-        "latitude": 342,
-        "longitude": 212
+        "street": "Calle Las Flores 123",
+        "city": "Lima",
+        "latitude": -12.1156,
+        "longitude": -77.026
       },
-      "userId": 2,
       "id": 6
     },
     {
-      "name": "2",
-      "email": "23r1213",
-      "phone": "+51924380050",
-      "groupId": 6,
+      "name": "Ana García",
+      "email": "ana.garcia@example.com",
+      "phone": "+51945678901",
+      "groupId": 2,
+      "userId": 1,
+      "isLeader": false,
       "address": {
-        "street": "123",
-        "city": "342",
-        "latitude": 213,
-        "longitude": 342
+        "street": "Av. Reducto 456",
+        "city": "Lima",
+        "latitude": -12.1339,
+        "longitude": -77.0285
       },
-      "userId": 2,
-      "id": 8
+      "id": 7
     },
     {
-      "name": "3",
-      "email": "23",
-      "phone": "21321",
-      "groupId": 6,
+      "name": "Roberto López",
+      "email": "roberto.lopez@example.com",
+      "phone": "+51987654321",
+      "groupId": 3,
+      "userId": 1,
+      "isLeader": false,
       "address": {
-        "street": "123",
-        "city": "432",
-        "latitude": 1232,
-        "longitude": 324
+        "street": "Jr. Ica 789",
+        "city": "Lima",
+        "latitude": -12.0521,
+        "longitude": -77.0236
       },
-      "userId": 2,
-      "id": 9
+      "id": 8
     }
   ],
   "groups": [
@@ -127,10 +161,7 @@
       "description": "Tech team daily lunch crew",
       "color": "#4ECDC4",
       "userId": 1,
-      "favoriteRestaurants": [
-        3,
-        6
-      ]
+      "favoriteRestaurants": [3, 6]
     },
     {
       "name": "Friday Lunch Crew",
@@ -138,27 +169,388 @@
       "color": "#95E1D3",
       "userId": 1,
       "id": 3
+    }
+  ],
+  "calculations": [
+    {
+      "id": 1,
+      "groupId": 1,
+      "restaurantId": 1,
+      "restaurantName": "KFC - San Isidro",
+      "groupMembers": [
+        {"id": 1, "name": "John Smith", "email": "john.smith@example.com"},
+        {"id": 2, "name": "Sarah Johnson", "email": "sarah.johnson@example.com"}
+      ],
+      "centerPoint": {"lat": -12.1084, "lng": -77.0351},
+      "distance": 2.5,
+      "averageDistance": 2.8,
+      "maxSpread": 3.2,
+      "viabilityScore": 85,
+      "membersByDistance": [
+        {"id": 1, "name": "John Smith", "distance": 2.3},
+        {"id": 2, "name": "Sarah Johnson", "distance": 3.3}
+      ],
+      "timestamp": "2025-01-12T10:30:00Z",
+      "createdAt": "2025-01-12T10:30:00Z",
+      "updatedAt": "2025-01-12T10:30:00Z"
     },
     {
-      "name": "XDD",
-      "description": "aaa",
-      "color": "#FF6B6B",
-      "userId": 1,
-      "id": 4
+      "id": 2,
+      "groupId": 1,
+      "restaurantId": 7,
+      "restaurantName": "Pollo a la Brasa - Miraflores",
+      "groupMembers": [
+        {"id": 1, "name": "John Smith", "email": "john.smith@example.com"},
+        {"id": 2, "name": "Sarah Johnson", "email": "sarah.johnson@example.com"},
+        {"id": 6, "name": "Carlos Mendoza", "email": "carlos.mendoza@example.com"}
+      ],
+      "centerPoint": {"lat": -12.1109, "lng": -77.0340},
+      "distance": 1.8,
+      "averageDistance": 2.1,
+      "maxSpread": 2.9,
+      "viabilityScore": 92,
+      "membersByDistance": [
+        {"id": 1, "name": "John Smith", "distance": 1.9},
+        {"id": 2, "name": "Sarah Johnson", "distance": 2.5},
+        {"id": 6, "name": "Carlos Mendoza", "distance": 1.8}
+      ],
+      "timestamp": "2025-01-12T11:45:00Z",
+      "createdAt": "2025-01-12T11:45:00Z",
+      "updatedAt": "2025-01-12T11:45:00Z"
     },
     {
-      "name": "xddd",
-      "description": "123",
-      "color": "#FF6B6B",
-      "userId": 2,
-      "id": 5
+      "id": 3,
+      "groupId": 2,
+      "restaurantId": 5,
+      "restaurantName": "Pizzería Napoli",
+      "groupMembers": [
+        {"id": 4, "name": "Emily Davis", "email": "emily.davis@example.com"},
+        {"id": 7, "name": "Ana García", "email": "ana.garcia@example.com"}
+      ],
+      "centerPoint": {"lat": -12.1064, "lng": -77.0293},
+      "distance": 3.2,
+      "averageDistance": 3.5,
+      "maxSpread": 4.1,
+      "viabilityScore": 78,
+      "membersByDistance": [
+        {"id": 4, "name": "Emily Davis", "distance": 3.1},
+        {"id": 7, "name": "Ana García", "distance": 3.9}
+      ],
+      "timestamp": "2025-01-12T12:00:00Z",
+      "createdAt": "2025-01-12T12:00:00Z",
+      "updatedAt": "2025-01-12T12:00:00Z"
     },
     {
-      "name": "21312",
-      "description": "43",
-      "color": "#FF6B6B",
-      "userId": 2,
-      "id": 6
+      "id": 4,
+      "groupId": 3,
+      "restaurantId": 6,
+      "restaurantName": "Sushi Master",
+      "groupMembers": [
+        {"id": 3, "name": "Michael Brown", "email": "michael.brown@example.com"},
+        {"id": 5, "name": "David Wilson", "email": "david.wilson@example.com"},
+        {"id": 8, "name": "Roberto López", "email": "roberto.lopez@example.com"}
+      ],
+      "centerPoint": {"lat": -12.0489, "lng": -77.0269},
+      "distance": 4.5,
+      "averageDistance": 4.8,
+      "maxSpread": 5.3,
+      "viabilityScore": 72,
+      "membersByDistance": [
+        {"id": 3, "name": "Michael Brown", "distance": 4.2},
+        {"id": 8, "name": "Roberto López", "distance": 4.9},
+        {"id": 5, "name": "David Wilson", "distance": 5.2}
+      ],
+      "timestamp": "2025-01-12T12:30:00Z",
+      "createdAt": "2025-01-12T12:30:00Z",
+      "updatedAt": "2025-01-12T12:30:00Z"
+    },
+    {
+      "id": 5,
+      "groupId": 1,
+      "restaurantId": 9,
+      "restaurantName": "La Parrilla Steakhouse",
+      "groupMembers": [
+        {"id": 1, "name": "John Smith", "email": "john.smith@example.com"},
+        {"id": 2, "name": "Sarah Johnson", "email": "sarah.johnson@example.com"},
+        {"id": 6, "name": "Carlos Mendoza", "email": "carlos.mendoza@example.com"}
+      ],
+      "centerPoint": {"lat": -12.1109, "lng": -77.0340},
+      "distance": 2.1,
+      "averageDistance": 2.4,
+      "maxSpread": 3.0,
+      "viabilityScore": 88,
+      "membersByDistance": [
+        {"id": 1, "name": "John Smith", "distance": 2.2},
+        {"id": 6, "name": "Carlos Mendoza", "distance": 2.1},
+        {"id": 2, "name": "Sarah Johnson", "distance": 2.9}
+      ],
+      "timestamp": "2025-01-12T13:15:00Z",
+      "createdAt": "2025-01-12T13:15:00Z",
+      "updatedAt": "2025-01-12T13:15:00Z"
+    },
+    {
+      "id": 6,
+      "groupId": 2,
+      "restaurantId": 10,
+      "restaurantName": "Café Verde - Health Bowls",
+      "groupMembers": [
+        {"id": 4, "name": "Emily Davis", "email": "emily.davis@example.com"},
+        {"id": 7, "name": "Ana García", "email": "ana.garcia@example.com"}
+      ],
+      "centerPoint": {"lat": -12.1064, "lng": -77.0293},
+      "distance": 2.9,
+      "averageDistance": 3.2,
+      "maxSpread": 3.8,
+      "viabilityScore": 81,
+      "membersByDistance": [
+        {"id": 4, "name": "Emily Davis", "distance": 3.0},
+        {"id": 7, "name": "Ana García", "distance": 3.4}
+      ],
+      "timestamp": "2025-01-12T14:00:00Z",
+      "createdAt": "2025-01-12T14:00:00Z",
+      "updatedAt": "2025-01-12T14:00:00Z"
+    }
+  ],
+  "restaurants": [
+    {
+      "id": 1,
+      "name": "KFC - San Isidro",
+      "cuisine": "Comida Rápida",
+      "rating": 4.5,
+      "priceRange": "$$",
+      "address": {
+        "street": "Av. Paseo de la República 5150",
+        "city": "Lima",
+        "latitude": -12.0904,
+        "longitude": -77.0396
+      },
+      "phone": "+51 1 555-1001",
+      "openHours": "10:00 AM - 11:00 PM",
+      "userId": 1
+    },
+    {
+      "id": 2,
+      "name": "KFC - Miraflores",
+      "cuisine": "Comida Rápida",
+      "rating": 4.7,
+      "priceRange": "$$",
+      "address": {
+        "street": "Av. Larco 1028",
+        "city": "Lima",
+        "latitude": -12.1265,
+        "longitude": -77.0305
+      },
+      "phone": "+51 1 555-1002",
+      "openHours": "10:00 AM - 11:00 PM",
+      "userId": 1
+    },
+    {
+      "id": 3,
+      "name": "KFC - Centro Histórico",
+      "cuisine": "Comida Rápida",
+      "rating": 4.3,
+      "priceRange": "$",
+      "address": {
+        "street": "Jr. Lampa 540",
+        "city": "Lima",
+        "latitude": -12.0469,
+        "longitude": -77.0289
+      },
+      "phone": "+51 1 555-1003",
+      "openHours": "11:00 AM - 10:00 PM",
+      "userId": 1
+    },
+    {
+      "id": 4,
+      "name": "Burger Haven",
+      "cuisine": "American",
+      "rating": 4.4,
+      "priceRange": "$$",
+      "address": {
+        "street": "Av. Arequipa 4050",
+        "city": "Lima",
+        "latitude": -12.0789,
+        "longitude": -77.0321
+      },
+      "phone": "+51 1 555-1004",
+      "openHours": "11:00 AM - 10:30 PM",
+      "userId": 1
+    },
+    {
+      "id": 5,
+      "name": "Pizzería Napoli",
+      "cuisine": "Italian",
+      "rating": 4.6,
+      "priceRange": "$$$",
+      "address": {
+        "street": "Jr. de la Unión 600",
+        "city": "Lima",
+        "latitude": -12.0461,
+        "longitude": -77.0283
+      },
+      "phone": "+51 1 555-1005",
+      "openHours": "12:00 PM - 11:00 PM",
+      "userId": 1
+    },
+    {
+      "id": 6,
+      "name": "Sushi Master",
+      "cuisine": "Japanese",
+      "rating": 4.8,
+      "priceRange": "$$$",
+      "address": {
+        "street": "Calle Las Flores 123",
+        "city": "Lima",
+        "latitude": -12.1156,
+        "longitude": -77.026
+      },
+      "phone": "+51 1 555-1006",
+      "openHours": "12:00 PM - 11:30 PM",
+      "userId": 1
+    },
+    {
+      "id": 7,
+      "name": "Pollo a la Brasa - Miraflores",
+      "cuisine": "Peruvian",
+      "rating": 4.9,
+      "priceRange": "$",
+      "address": {
+        "street": "Av. Paseo de la República 3500",
+        "city": "Lima",
+        "latitude": -12.1089,
+        "longitude": -77.034
+      },
+      "phone": "+51 1 555-1007",
+      "openHours": "11:00 AM - 11:00 PM",
+      "userId": 1
+    },
+    {
+      "id": 8,
+      "name": "Chifa Oriental",
+      "cuisine": "Chinese",
+      "rating": 4.2,
+      "priceRange": "$$",
+      "address": {
+        "street": "Jr. Coquimbo 456",
+        "city": "Lima",
+        "latitude": -12.0889,
+        "longitude": -77.0412
+      },
+      "phone": "+51 1 555-1008",
+      "openHours": "11:30 AM - 11:00 PM",
+      "userId": 1
+    },
+    {
+      "id": 9,
+      "name": "La Parrilla Steakhouse",
+      "cuisine": "Argentine",
+      "rating": 4.7,
+      "priceRange": "$$$",
+      "address": {
+        "street": "Av. Conquistadores 950",
+        "city": "Lima",
+        "latitude": -12.1034,
+        "longitude": -77.0298
+      },
+      "phone": "+51 1 555-1009",
+      "openHours": "12:00 PM - 11:30 PM",
+      "userId": 1
+    },
+    {
+      "id": 10,
+      "name": "Café Verde - Health Bowls",
+      "cuisine": "Healthy",
+      "rating": 4.6,
+      "priceRange": "$$",
+      "address": {
+        "street": "Av. Larco 2890",
+        "city": "Lima",
+        "latitude": -12.1298,
+        "longitude": -77.0289
+      },
+      "phone": "+51 1 555-1010",
+      "openHours": "7:00 AM - 8:00 PM",
+      "userId": 1
+    },
+    {
+      "id": 11,
+      "name": "Cantina Italiana - Centro",
+      "cuisine": "Italian",
+      "rating": 4.5,
+      "priceRange": "$$",
+      "address": {
+        "street": "Jr. Ancash 345",
+        "city": "Lima",
+        "latitude": -12.0502,
+        "longitude": -77.0301
+      },
+      "phone": "+51 1 555-1011",
+      "openHours": "12:00 PM - 10:00 PM",
+      "userId": 1
+    },
+    {
+      "id": 12,
+      "name": "Thai Express",
+      "cuisine": "Thai",
+      "rating": 4.4,
+      "priceRange": "$$",
+      "address": {
+        "street": "Av. Diagonal 567",
+        "city": "Lima",
+        "latitude": -12.1145,
+        "longitude": -77.0356
+      },
+      "phone": "+51 1 555-1012",
+      "openHours": "11:30 AM - 11:00 PM",
+      "userId": 1
+    },
+    {
+      "id": 13,
+      "name": "Taco Fiesta",
+      "cuisine": "Mexican",
+      "rating": 4.3,
+      "priceRange": "$",
+      "address": {
+        "street": "Av. Arequipa 1234",
+        "city": "Lima",
+        "latitude": -12.0856,
+        "longitude": -77.0285
+      },
+      "phone": "+51 1 555-1013",
+      "openHours": "11:00 AM - 10:30 PM",
+      "userId": 1
+    },
+    {
+      "id": 14,
+      "name": "Seafood Paradise",
+      "cuisine": "Seafood",
+      "rating": 4.8,
+      "priceRange": "$$$",
+      "address": {
+        "street": "Av. Costa Verde 2156",
+        "city": "Lima",
+        "latitude": -12.1512,
+        "longitude": -77.0156
+      },
+      "phone": "+51 1 555-1014",
+      "openHours": "12:00 PM - 11:30 PM",
+      "userId": 1
+    },
+    {
+      "id": 15,
+      "name": "El Wok Asiático",
+      "cuisine": "Asian Fusion",
+      "rating": 4.5,
+      "priceRange": "$$",
+      "address": {
+        "street": "Jr. Ica 890",
+        "city": "Lima",
+        "latitude": -12.0578,
+        "longitude": -77.0234
+      },
+      "phone": "+51 1 555-1015",
+      "openHours": "11:00 AM - 11:00 PM",
+      "userId": 1
     }
   ],
   "lunchHistory": [
@@ -167,132 +559,317 @@
       "groupId": 1,
       "restaurantId": 1,
       "date": "2024-11-20",
-      "attendees": [
-        1,
-        2
-      ],
-      "notes": "Great pasta!"
+      "attendees": [1, 2, 6],
+      "notes": "Great chicken! Everyone enjoyed it"
     },
     {
       "id": 2,
       "groupId": 2,
-      "restaurantId": 3,
-      "date": "2024-11-22",
-      "attendees": [
-        3,
-        4
-      ],
-      "notes": "Best burgers in town"
-    }
-  ],
-  "restaurants": [
-    {
-      "id": 1,
-      "name": "The Italian Corner",
-      "cuisine": "Italian",
-      "rating": 4.5,
-      "priceRange": "$$",
-      "address": {
-        "street": "100 Restaurant Row",
-        "city": "New York",
-        "latitude": 40.758,
-        "longitude": -73.9855
-      },
-      "phone": "+1 555-1001",
-      "openHours": "11:00 AM - 10:00 PM"
-    },
-    {
-      "id": 2,
-      "name": "Sushi Master",
-      "cuisine": "Japanese",
-      "rating": 4.7,
-      "priceRange": "$$$",
-      "address": {
-        "street": "200 East 52nd Street",
-        "city": "New York",
-        "latitude": 40.7565,
-        "longitude": -73.972
-      },
-      "phone": "+1 555-1002",
-      "openHours": "12:00 PM - 11:00 PM"
+      "restaurantId": 5,
+      "date": "2024-11-21",
+      "attendees": [4, 7],
+      "notes": "Excellent Italian food"
     },
     {
       "id": 3,
-      "name": "Burger Haven",
-      "cuisine": "American",
-      "rating": 4.3,
-      "priceRange": "$",
-      "address": {
-        "street": "300 West 42nd Street",
-        "city": "New York",
-        "latitude": 40.759,
-        "longitude": -73.99
-      },
-      "phone": "+1 555-1003",
-      "openHours": "10:00 AM - 11:00 PM"
-    },
-    {
-      "id": 4,
-      "name": "Taco Fiesta",
-      "cuisine": "Mexican",
-      "rating": 4.4,
-      "priceRange": "$$",
-      "address": {
-        "street": "400 Lexington Avenue",
-        "city": "New York",
-        "latitude": 40.752,
-        "longitude": -73.976
-      },
-      "phone": "+1 555-1004",
-      "openHours": "11:00 AM - 10:00 PM"
-    },
-    {
-      "id": 5,
-      "name": "Le Petit Bistro",
-      "cuisine": "French",
-      "rating": 4.8,
-      "priceRange": "$$$",
-      "address": {
-        "street": "500 Park Avenue",
-        "city": "New York",
-        "latitude": 40.7614,
-        "longitude": -73.973
-      },
-      "phone": "+1 555-1005",
-      "openHours": "5:00 PM - 11:00 PM"
-    },
-    {
-      "id": 6,
-      "name": "Dragon Wok",
-      "cuisine": "Chinese",
-      "rating": 4.2,
-      "priceRange": "$$",
-      "address": {
-        "street": "600 Third Avenue",
-        "city": "New York",
-        "latitude": 40.75,
-        "longitude": -73.978
-      },
-      "phone": "+1 555-1006",
-      "openHours": "11:30 AM - 10:30 PM"
+      "groupId": 3,
+      "restaurantId": 6,
+      "date": "2024-11-22",
+      "attendees": [3, 5, 8],
+      "notes": "Best sushi in Lima"
     }
   ],
-  "users": [
-    {
-      "id": 1,
-      "username": "admin",
-      "email": "admin@example.com",
-      "password": "admin123",
-      "role": "admin",
-      "name": "Admin User"
-    },
-    {
-      "id": 2,
-      "username": "user",
-      "email": "user@example.com",
-      "password": "user123",
-      "role": "user",
-      "name": "Regular User"
-    }
-  ]
+  "mapData":
+  {
+    "groupLocations": [
+      {
+        "id": 1,
+        "groupId": 1,
+        "groupName": "Marketing Team",
+        "centerPoint": {
+          "lat": -12.1084,
+          "lng": -77.0351
+        },
+        "members": [
+          {
+            "memberId": 1,
+            "name": "John Smith",
+            "location": {
+              "lat": -12.0904,
+              "lng": -77.0396
+            },
+            "address": "Av. Paseo de la República 5150"
+          },
+          {
+            "memberId": 2,
+            "name": "Sarah Johnson",
+            "location": {
+              "lat": -12.1265,
+              "lng": -77.0305
+            },
+            "address": "Av. Larco 1028"
+          },
+          {
+            "memberId": 6,
+            "name": "Carlos Mendoza",
+            "location": {
+              "lat": -12.1156,
+              "lng": -77.026
+            },
+            "address": "Calle Las Flores 123"
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "groupId": 2,
+        "groupName": "Engineering Squad",
+        "centerPoint": {
+          "lat": -12.1064,
+          "lng": -77.0293
+        },
+        "members": [
+          {
+            "memberId": 4,
+            "name": "Emily Davis",
+            "location": {
+              "lat": -12.0789,
+              "lng": -77.0321
+            },
+            "address": "Av. Arequipa 4050"
+          },
+          {
+            "memberId": 7,
+            "name": "Ana García",
+            "location": {
+              "lat": -12.1339,
+              "lng": -77.0285
+            },
+            "address": "Av. Reducto 456"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "groupId": 3,
+        "groupName": "Friday Lunch Crew",
+        "centerPoint": {
+          "lat": -12.0489,
+          "lng": -77.0269
+        },
+        "members": [
+          {
+            "memberId": 3,
+            "name": "Michael Brown",
+            "location": {
+              "lat": -12.0469,
+              "lng": -77.0289
+            },
+            "address": "Jr. Lampa 540"
+          },
+          {
+            "memberId": 5,
+            "name": "David Wilson",
+            "location": {
+              "lat": -12.0461,
+              "lng": -77.0283
+            },
+            "address": "Jr. de la Unión 600"
+          },
+          {
+            "memberId": 8,
+            "name": "Roberto López",
+            "location": {
+              "lat": -12.0521,
+              "lng": -77.0236
+            },
+            "address": "Jr. Ica 789"
+          }
+        ]
+      }
+    ],
+    "optimizedRoutes": [
+      {
+        "id": 1,
+        "calculationId": 1,
+        "groupId": 1,
+        "restaurantId": 1,
+        "restaurantLocation": {
+          "lat": -12.0904,
+          "lng": -77.0396,
+          "name": "KFC - San Isidro"
+        },
+        "routePoints": [
+          {
+            "order": 1,
+            "memberId": 1,
+            "name": "John Smith",
+            "location": {
+              "lat": -12.0904,
+              "lng": -77.0396
+            },
+            "distance": 0.1,
+            "duration": 2
+          },
+          {
+            "order": 2,
+            "memberId": 2,
+            "name": "Sarah Johnson",
+            "location": {
+              "lat": -12.1265,
+              "lng": -77.0305
+            },
+            "distance": 4.8,
+            "duration": 12
+          },
+          {
+            "order": 3,
+            "memberId": 6,
+            "name": "Carlos Mendoza",
+            "location": {
+              "lat": -12.1156,
+              "lng": -77.026
+            },
+            "distance": 2.3,
+            "duration": 6
+          }
+        ],
+        "totalDistance": 7.2,
+        "totalDuration": 20,
+        "centerPoint": {
+          "lat": -12.1084,
+          "lng": -77.0351
+        }
+      },
+      {
+        "id": 2,
+        "calculationId": 2,
+        "groupId": 1,
+        "restaurantId": 7,
+        "restaurantLocation": {
+          "lat": -12.1089,
+          "lng": -77.034,
+          "name": "Pollo a la Brasa - Miraflores"
+        },
+        "routePoints": [
+          {
+            "order": 1,
+            "memberId": 1,
+            "name": "John Smith",
+            "location": {
+              "lat": -12.0904,
+              "lng": -77.0396
+            },
+            "distance": 2.2,
+            "duration": 6
+          },
+          {
+            "order": 2,
+            "memberId": 6,
+            "name": "Carlos Mendoza",
+            "location": {
+              "lat": -12.1156,
+              "lng": -77.026
+            },
+            "distance": 0.8,
+            "duration": 2
+          },
+          {
+            "order": 3,
+            "memberId": 2,
+            "name": "Sarah Johnson",
+            "location": {
+              "lat": -12.1265,
+              "lng": -77.0305
+            },
+            "distance": 3.1,
+            "duration": 8
+          }
+        ],
+        "totalDistance": 6.1,
+        "totalDuration": 16,
+        "centerPoint": {
+          "lat": -12.1109,
+          "lng": -77.034
+        }
+      },
+      {
+        "id": 3,
+        "calculationId": 3,
+        "groupId": 2,
+        "restaurantId": 5,
+        "restaurantLocation": {
+          "lat": -12.0461,
+          "lng": -77.0283,
+          "name": "Pizzería Napoli"
+        },
+        "routePoints": [
+          {
+            "order": 1,
+            "memberId": 4,
+            "name": "Emily Davis",
+            "location": {
+              "lat": -12.0789,
+              "lng": -77.0321
+            },
+            "distance": 3.5,
+            "duration": 9
+          },
+          {
+            "order": 2,
+            "memberId": 7,
+            "name": "Ana García",
+            "location": {
+              "lat": -12.1339,
+              "lng": -77.0285
+            },
+            "distance": 4.1,
+            "duration": 11
+          }
+        ],
+        "totalDistance": 7.6,
+        "totalDuration": 20,
+        "centerPoint": {
+          "lat": -12.1064,
+          "lng": -77.0293
+        }
+      }
+    ],
+    "distanceMatrix": [
+      {
+        "id": 1,
+        "origin": "John Smith",
+        "destination": "KFC - San Isidro",
+        "distance": 0.1,
+        "duration": 2,
+        "travelMode": "DRIVING"
+      },
+      {
+        "id": 2,
+        "origin": "Sarah Johnson",
+        "destination": "KFC - San Isidro",
+        "distance": 4.8,
+        "duration": 12,
+        "travelMode": "DRIVING"
+      },
+      {
+        "id": 3,
+        "origin": "Carlos Mendoza",
+        "destination": "KFC - San Isidro",
+        "distance": 2.3,
+        "duration": 6,
+        "travelMode": "DRIVING"
+      },
+      {
+        "id": 4,
+        "origin": "Group Center",
+        "destination": "KFC - San Isidro",
+        "distance": 2.5,
+        "duration": 7,
+        "travelMode": "DRIVING"
+      }
+    ]
+  }
 }
+
+
