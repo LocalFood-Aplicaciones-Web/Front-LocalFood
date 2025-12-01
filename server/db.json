@@ -1,0 +1,298 @@
+{
+  "colleagues": [
+    {
+      "name": "John Smith",
+      "email": "john.smith@example.com",
+      "phone": "+1 555-0101",
+      "groupId": 1,
+      "userId": 1,
+      "address": {
+        "street": "123 Main Street",
+        "city": "New York",
+        "latitude": 40.7589,
+        "longitude": -73.9851
+      },
+      "id": 1
+    },
+    {
+      "id": 2,
+      "name": "Sarah Johnson",
+      "email": "sarah.johnson@example.com",
+      "phone": "+1 555-0102",
+      "userId": 1,
+      "groupId": 1,
+      "address": {
+        "street": "456 Park Avenue",
+        "city": "New York",
+        "latitude": 40.7614,
+        "longitude": -73.9776
+      }
+    },
+    {
+      "name": "Michael Brown",
+      "email": "michael.brown@example.com",
+      "phone": "+1 555-0103",
+      "groupId": 3,
+      "userId": 1,
+      "address": {
+        "street": "789 Broadway",
+        "city": "New York",
+        "latitude": 40.7505,
+        "longitude": -73.9934
+      },
+      "id": 3
+    },
+    {
+      "id": 4,
+      "name": "Emily Davis",
+      "email": "emily.davis@example.com",
+      "phone": "+1 555-0104",
+      "userId": 1,
+      "groupId": 2,
+      "address": {
+        "street": "321 Fifth Avenue",
+        "city": "New York",
+        "latitude": 40.7549,
+        "longitude": -73.984
+      }
+    },
+    {
+      "name": "David Wilson",
+      "email": "david.wilson@example.com",
+      "phone": "+1 555-0105",
+      "groupId": 3,
+      "userId": 1,
+      "address": {
+        "street": "654 Madison Avenue",
+        "city": "New York",
+        "latitude": 40.7614,
+        "longitude": -73.9719
+      },
+      "id": 5
+    },
+    {
+      "name": "1",
+      "email": "xdd@xdd.com",
+      "phone": "",
+      "groupId": 5,
+      "address": {
+        "street": "123",
+        "city": "123",
+        "latitude": 342,
+        "longitude": 212
+      },
+      "userId": 2,
+      "id": 6
+    },
+    {
+      "name": "2",
+      "email": "23r1213",
+      "phone": "+51924380050",
+      "groupId": 6,
+      "address": {
+        "street": "123",
+        "city": "342",
+        "latitude": 213,
+        "longitude": 342
+      },
+      "userId": 2,
+      "id": 8
+    },
+    {
+      "name": "3",
+      "email": "23",
+      "phone": "21321",
+      "groupId": 6,
+      "address": {
+        "street": "123",
+        "city": "432",
+        "latitude": 1232,
+        "longitude": 324
+      },
+      "userId": 2,
+      "id": 9
+    }
+  ],
+  "groups": [
+    {
+      "name": "Marketing Team",
+      "description": "Marketing department lunch group",
+      "color": "#FF6B6B",
+      "userId": 1,
+      "id": 1
+    },
+    {
+      "id": 2,
+      "name": "Engineering Squad",
+      "description": "Tech team daily lunch crew",
+      "color": "#4ECDC4",
+      "userId": 1,
+      "favoriteRestaurants": [
+        3,
+        6
+      ]
+    },
+    {
+      "name": "Friday Lunch Crew",
+      "description": "Weekly Friday lunch group",
+      "color": "#95E1D3",
+      "userId": 1,
+      "id": 3
+    },
+    {
+      "name": "XDD",
+      "description": "aaa",
+      "color": "#FF6B6B",
+      "userId": 1,
+      "id": 4
+    },
+    {
+      "name": "xddd",
+      "description": "123",
+      "color": "#FF6B6B",
+      "userId": 2,
+      "id": 5
+    },
+    {
+      "name": "21312",
+      "description": "43",
+      "color": "#FF6B6B",
+      "userId": 2,
+      "id": 6
+    }
+  ],
+  "lunchHistory": [
+    {
+      "id": 1,
+      "groupId": 1,
+      "restaurantId": 1,
+      "date": "2024-11-20",
+      "attendees": [
+        1,
+        2
+      ],
+      "notes": "Great pasta!"
+    },
+    {
+      "id": 2,
+      "groupId": 2,
+      "restaurantId": 3,
+      "date": "2024-11-22",
+      "attendees": [
+        3,
+        4
+      ],
+      "notes": "Best burgers in town"
+    }
+  ],
+  "restaurants": [
+    {
+      "id": 1,
+      "name": "The Italian Corner",
+      "cuisine": "Italian",
+      "rating": 4.5,
+      "priceRange": "$$",
+      "address": {
+        "street": "100 Restaurant Row",
+        "city": "New York",
+        "latitude": 40.758,
+        "longitude": -73.9855
+      },
+      "phone": "+1 555-1001",
+      "openHours": "11:00 AM - 10:00 PM"
+    },
+    {
+      "id": 2,
+      "name": "Sushi Master",
+      "cuisine": "Japanese",
+      "rating": 4.7,
+      "priceRange": "$$$",
+      "address": {
+        "street": "200 East 52nd Street",
+        "city": "New York",
+        "latitude": 40.7565,
+        "longitude": -73.972
+      },
+      "phone": "+1 555-1002",
+      "openHours": "12:00 PM - 11:00 PM"
+    },
+    {
+      "id": 3,
+      "name": "Burger Haven",
+      "cuisine": "American",
+      "rating": 4.3,
+      "priceRange": "$",
+      "address": {
+        "street": "300 West 42nd Street",
+        "city": "New York",
+        "latitude": 40.759,
+        "longitude": -73.99
+      },
+      "phone": "+1 555-1003",
+      "openHours": "10:00 AM - 11:00 PM"
+    },
+    {
+      "id": 4,
+      "name": "Taco Fiesta",
+      "cuisine": "Mexican",
+      "rating": 4.4,
+      "priceRange": "$$",
+      "address": {
+        "street": "400 Lexington Avenue",
+        "city": "New York",
+        "latitude": 40.752,
+        "longitude": -73.976
+      },
+      "phone": "+1 555-1004",
+      "openHours": "11:00 AM - 10:00 PM"
+    },
+    {
+      "id": 5,
+      "name": "Le Petit Bistro",
+      "cuisine": "French",
+      "rating": 4.8,
+      "priceRange": "$$$",
+      "address": {
+        "street": "500 Park Avenue",
+        "city": "New York",
+        "latitude": 40.7614,
+        "longitude": -73.973
+      },
+      "phone": "+1 555-1005",
+      "openHours": "5:00 PM - 11:00 PM"
+    },
+    {
+      "id": 6,
+      "name": "Dragon Wok",
+      "cuisine": "Chinese",
+      "rating": 4.2,
+      "priceRange": "$$",
+      "address": {
+        "street": "600 Third Avenue",
+        "city": "New York",
+        "latitude": 40.75,
+        "longitude": -73.978
+      },
+      "phone": "+1 555-1006",
+      "openHours": "11:30 AM - 10:30 PM"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "admin",
+      "email": "admin@example.com",
+      "password": "admin123",
+      "role": "admin",
+      "name": "Admin User"
+    },
+    {
+      "id": 2,
+      "username": "user",
+      "email": "user@example.com",
+      "password": "user123",
+      "role": "user",
+      "name": "Regular User"
+    }
+  ]
+}

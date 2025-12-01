@@ -1,0 +1,69 @@
+{
+  "option": {
+    "home": "Inicio",
+    "colleagues": "Colegas",
+    "restaurants": "Restaurantes",
+    "calculate": "Cálculo",
+    "subscriptions": "Suscripciones"
+  },
+  "authoring-phrase": {
+    "intro": "Hecho con",
+    "use": "utilizando",
+    "author": "por el Equipo de Desarrollo de {brand}"
+  },
+  "home": {
+    "title": "Bienvenido",
+    "content": "Bienvenido al Calculador de Distancias de Restaurantes. ¡Gestiona tus colegas y encuentra los mejores puntos de encuentro!"
+  },
+  "page-not-found": {
+    "title": "Página no encontrada",
+    "content": "La ruta {unavailable-route} no está disponible.",
+    "go-home": "Ir al Inicio"
+  },
+  "colleagues": {
+    "title": "Colegas",
+    "addNew": "Agregar Colega",
+    "editColleague": "Editar Colega",
+    "noColleagues": "No hay colegas aún. ¡Comienza agregando uno!",
+    "confirmDelete": "¿Estás seguro de que deseas eliminar a {name}?",
+    "name": "Nombre",
+    "email": "Correo Electrónico",
+    "phone": "Teléfono",
+    "street": "Dirección",
+    "city": "Ciudad",
+    "latitude": "Latitud",
+    "longitude": "Longitud",
+    "namePlaceholder": "Ingresa el nombre del colega",
+    "emailPlaceholder": "colega@ejemplo.com",
+    "phonePlaceholder": "+52 123 456 7890",
+    "streetPlaceholder": "Av. Principal 123",
+    "cityPlaceholder": "Ciudad de México",
+    "latitudePlaceholder": "19.4326",
+    "longitudePlaceholder": "-99.1332"
+  },
+  "restaurants": {
+    "title": "Restaurantes",
+    "addNew": "Agregar Restaurante",
+    "noRestaurants": "No hay restaurantes aún."
+  },
+  "calculate": {
+    "title": "Calcular Distancia",
+    "description": "Encuentra el mejor restaurante para tu grupo"
+  },
+  "subscriptions": {
+    "title": "Suscripciones"
+  },
+  "common": {
+    "loading": "Cargando...",
+    "edit": "Editar",
+    "delete": "Eliminar",
+    "cancel": "Cancelar",
+    "add": "Agregar",
+    "update": "Actualizar",
+    "save": "Guardar",
+    "close": "Cerrar"
+  },
+  "errors": {
+    "occurred": "Ocurrieron errores"
+  }
+}

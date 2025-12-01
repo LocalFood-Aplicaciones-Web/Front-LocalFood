@@ -1,0 +1,107 @@
+{
+  "option": {
+    "home": "Home",
+    "colleagues": "Colleagues",
+    "restaurants": "Restaurants",
+    "calculate": "Calculate",
+    "subscriptions": "Subscriptions"
+  },
+  "authoring-phrase": {
+    "intro": "Made with",
+    "use": "using",
+    "author": "by {brand} Developer Team"
+  },
+  "home": {
+    "title": "Welcome",
+    "content": "Welcome to Restaurant Distance Calculator. Manage your colleagues and find the best meeting points!"
+  },
+  "page-not-found": {
+    "title": "Page Not Found",
+    "content": "The path {unavailable-route} is not available.",
+    "go-home": "Go Home"
+  },
+  "login": {
+    "title": "Sign In",
+    "subtitle": "Sign in to your account",
+    "email": "Email",
+    "password": "Password",
+    "emailPlaceholder": "Enter your email",
+    "passwordPlaceholder": "Enter your password",
+    "loginButton": "Sign In",
+    "registerButton": "Create Account",
+    "noAccount": "Don't have an account?"
+  },
+  "register": {
+    "title": "Create Account",
+    "subtitle": "Join us today",
+    "name": "Full Name",
+    "username": "Username",
+    "email": "Email",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "namePlaceholder": "Enter your full name",
+    "usernamePlaceholder": "Choose a username",
+    "emailPlaceholder": "Enter your email",
+    "passwordPlaceholder": "Create a password",
+    "confirmPasswordPlaceholder": "Confirm your password",
+    "registerButton": "Create Account",
+    "loginButton": "Sign In",
+    "hasAccount": "Already have an account?"
+  },
+  "colleagues": {
+    "title": "Colleagues",
+    "addNew": "Add Colleague",
+    "editColleague": "Edit Colleague",
+    "noColleagues": "No colleagues yet. Start by adding one!",
+    "confirmDelete": "Are you sure you want to delete {name}?",
+    "name": "Name",
+    "email": "Email",
+    "phone": "Phone",
+    "street": "Street Address",
+    "city": "City",
+    "latitude": "Latitude",
+    "longitude": "Longitude",
+    "namePlaceholder": "Enter colleague name",
+    "emailPlaceholder": "colleague@example.com",
+    "phonePlaceholder": "+1 234 567 890",
+    "streetPlaceholder": "123 Main St",
+    "cityPlaceholder": "New York",
+    "latitudePlaceholder": "40.7128",
+    "longitudePlaceholder": "-74.0060"
+  },
+  "groups": {
+    "title": "Groups",
+    "addNew": "Add Group",
+    "editGroup": "Edit Group",
+    "name": "Group Name",
+    "description": "Description",
+    "color": "Color",
+    "members": "Members",
+    "noMembers": "No members in this group yet"
+  },
+  "restaurants": {
+    "title": "Restaurants",
+    "addNew": "Add Restaurant",
+    "noRestaurants": "No restaurants yet."
+  },
+  "calculate": {
+    "title": "Calculate Distance",
+    "description": "Find the best restaurant for your group"
+  },
+  "subscriptions": {
+    "title": "Subscriptions"
+  },
+  "common": {
+    "loading": "Loading...",
+    "edit": "Edit",
+    "delete": "Delete",
+    "cancel": "Cancel",
+    "add": "Add",
+    "update": "Update",
+    "save": "Save",
+    "close": "Close"
+  },
+  "errors": {
+    "occurred": "Errors occurred"
+  }
+}

@@ -1,0 +1,511 @@
+/* Global Styles - Restaurant Distance Calculator */
+
+:root {
+  /* Color Palette - Orange Theme */
+  --primary-color: #ff9655;
+  --primary-hover: #ff7f3d;
+  --primary-light: #ffb380;
+  --primary-lighter: #ffd4b3;
+  --accent-color: #ff6b35;
+  
+  /* Neutral Colors */
+  --text-primary: #333333;
+  --text-secondary: #666666;
+  --text-muted: #999999;
+  --border-color: #e0e0e0;
+  --background: #ffffff;
+  --background-light: #f9f9f9;
+  --background-dark: #f5f5f5;
+  
+  /* Status Colors */
+  --success: #4caf50;
+  --error: #d32f2f;
+  --warning: #ff9800;
+  --info: #2196f3;
+  
+  /* Shadows */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.15);
+  --shadow-primary: 0 4px 12px rgba(255, 150, 85, 0.3);
+  
+  /* Typography */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+  
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+  
+  /* Border Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-full: 9999px;
+  
+  /* Spacing */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+  
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-light);
+  color: var(--text-primary);
+  min-height: 100vh;
+}
+
+#app {
+  min-height: 100vh;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--text-primary);
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Links */
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--primary-hover);
+}
+
+/* Buttons */
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: all var(--transition-normal);
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Form Elements */
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: 1rem;
+  outline: none;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(255, 150, 85, 0.1);
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-light);
+  border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-color);
+}
+
+/* Utility Classes */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-lg);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-muted {
+  color: var(--text-muted);
+}
+
+.mt-1 { margin-top: var(--spacing-sm); }
+.mt-2 { margin-top: var(--spacing-md); }
+.mt-3 { margin-top: var(--spacing-lg); }
+.mt-4 { margin-top: var(--spacing-xl); }
+
+.mb-1 { margin-bottom: var(--spacing-sm); }
+.mb-2 { margin-bottom: var(--spacing-md); }
+.mb-3 { margin-bottom: var(--spacing-lg); }
+.mb-4 { margin-bottom: var(--spacing-xl); }
+
+.flex {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.gap-1 { gap: var(--spacing-sm); }
+.gap-2 { gap: var(--spacing-md); }
+.gap-3 { gap: var(--spacing-lg); }
+
+/* Card Component */
+.card {
+  background: var(--background);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-lg);
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-normal);
+}
+
+.card:hover {
+  box-shadow: var(--shadow-lg);
+}
+
+/* Loading Animation */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-spinner {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(255, 150, 85, 0.3);
+  border-radius: 50%;
+  border-top-color: var(--primary-color);
+  animation: spin 0.6s linear infinite;
+}
+
+/* Page Transitions */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity var(--transition-normal);
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+/* Slide Transitions */
+.slide-enter-active,
+.slide-leave-active {
+  transition: all 0.3s ease;
+}
+
+.slide-enter-from {
+  transform: translateX(-20px);
+  opacity: 0;
+}
+
+.slide-leave-to {
+  transform: translateX(20px);
+  opacity: 0;
+}
+
+/* Scale Transitions */
+.scale-enter-active,
+.scale-leave-active {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.scale-enter-from,
+.scale-leave-to {
+  transform: scale(0.95);
+  opacity: 0;
+}
+
+/* List Animations */
+.list-move,
+.list-enter-active,
+.list-leave-active {
+  transition: all 0.5s ease;
+}
+
+.list-enter-from {
+  opacity: 0;
+  transform: translateX(-30px);
+}
+
+.list-leave-to {
+  opacity: 0;
+  transform: translateX(30px);
+}
+
+.list-leave-active {
+  position: absolute;
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Animation Utility Classes */
+.animate-fade-in {
+  animation: fadeIn 0.5s ease;
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.5s ease;
+}
+
+.animate-fade-in-down {
+  animation: fadeInDown 0.5s ease;
+}
+
+.animate-slide-in-left {
+  animation: slideInLeft 0.5s ease;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.5s ease;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.3s ease;
+}
+
+.animate-bounce {
+  animation: bounce 1s ease infinite;
+}
+
+.animate-pulse {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+/* Hover Effects */
+.hover-lift {
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+
+.hover-lift:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.hover-grow {
+  transition: transform var(--transition-normal);
+}
+
+.hover-grow:hover {
+  transform: scale(1.05);
+}
+
+/* Loading Skeleton */
+@keyframes shimmer {
+  0% {
+    background-position: -468px 0;
+  }
+  100% {
+    background-position: 468px 0;
+  }
+}
+
+.skeleton {
+  animation: shimmer 1.2s ease-in-out infinite;
+  background: linear-gradient(to right, #f0f0f0 8%, #e0e0e0 18%, #f0f0f0 33%);
+  background-size: 800px 104px;
+  height: 20px;
+  border-radius: var(--radius-sm);
+}
+
+.skeleton-text {
+  height: 16px;
+  margin-bottom: 8px;
+}
+
+.skeleton-title {
+  height: 24px;
+  margin-bottom: 12px;
+}
+
+.skeleton-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  :root {
+    font-size: 14px;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+  
+  .container {
+    padding: 0 var(--spacing-md);
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    font-size: 13px;
+  }
+  
+  h1 {
+    font-size: 1.75rem;
+  }
+}
